@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Interaja com o Botão</title>
+</head>
+<body"><!-- Carrega função calcular ao carregar a página -->
+    <div class="status-bar">
+        <span>Sistema de Cálculo de Médias</span>
+        <span id="status">Pronto</span>
+    </div>
+    <h1>Programa de cálculo de média</h1>
+    <section>
+        <div>
+            <p>
+                <input type="button" id="iniciarPrograma" value="Iniciar programa" onclick="clicou()">
+                <input type="button" id="calcular" value="Calcular Média" onclick="calcular()">
+                <input type="button" id="reiniciar" value="Reiniciar Programa" onclick="limpa()">
+            </p>
+        </div>
+        <div>
+            <p id="saudacao"></p>
+            <p id="saudacaoAluno"></p><br>
+            <p id="resultado"></p>
+            <p id="aluno"></p>
+        </div>
+        <div>
+            <p>
+                <input type="button" id="limpaTudo" value="Recalcular" onclick="limpa()">
+                <input type="button" id="salvaMedia" value="Salvar Média" onclick="limpa()">
+            </p>
+        </div>
+    </section>
+    <script src="js/script.js"></script>
+    </body>
+
+</html>
