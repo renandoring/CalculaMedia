@@ -1,0 +1,175 @@
+/* Reset e Variáveis */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --light-color: #ecf0f1;
+  --dark-color: #2c3e50;
+  --success-color: #2ecc71;
+  --warning-color: #f39c12;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Layout Principal */
+body {
+  background-color: #f5f7fa;
+  color: var(--dark-color);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+h1 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+section {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #e0e0e0;
+}
+
+/* Contêineres e Seções */
+div {
+  margin-bottom: 1.5rem;
+}
+
+/* Botões */
+input[type="button"] {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin: 0.5rem;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--box-shadow);
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+input[type="button"]:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+input[type="button"]:active {
+  transform: translateY(0);
+}
+
+#iniciarPrograma {
+  background-color: var(--primary-color);
+}
+
+#calcular {
+  background-color: var(--success-color);
+}
+
+#limpaTudo {
+  background-color: var(--warning-color);
+}
+
+/* Resultados e Saídas */
+#saudacao, #saudacaoAluno {
+  font-size: 1.2rem;
+  padding: 1rem;
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--secondary-color);
+  margin: 1rem 0;
+}
+
+#resultado {
+  font-size: 1.3rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: var(--border-radius);
+  border: 1px dashed var(--secondary-color);
+  text-align: center;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin: 1rem 0;
+}
+
+/* Efeitos Especiais */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#resultado, #saudacao, #saudacaoAluno, #calcular, #limpaTudo, #salvaMedia, #aluno, #reiniciar {
+  animation: fadeIn 0.5s ease-out;
+  display: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+  
+  section {
+    padding: 1.5rem;
+  }
+  
+  input[type="button"] {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Barra de Status (opcional) */
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Estilo padrão para botões desabilitados */
+button:disabled, 
+input[type="button"]:disabled,
+input[type="submit"]:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  pointer-events: none; /* Remove todos os eventos do mouse */
+}
+
+/* Remove qualquer efeito hover para botões desabilitados */
+button:disabled:hover, 
+input[type="button"]:disabled:hover,
+input[type="submit"]:disabled:hover {
+  background-color: initial;
+  transform: none;
+  box-shadow: none;
+}
